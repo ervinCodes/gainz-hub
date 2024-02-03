@@ -20,20 +20,28 @@
     />
     <!-- Fonts -->
     <!-- 1 / Inter-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Forum&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Forum&family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <!-- 2 / Oxygen -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Forum&family=Inter:wght@400;600;700&family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Forum&family=Inter:wght@400;600;700&family=Oxygen:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
     <!-- My CSS -->
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand" style="background-color: #000000;">
-      <div class="container-fluid d-flex justify-content-center">
+    <nav class="navbar navbar-expand" style="background-color: #000000">
+      <div class="container-fluid">
         <button
           class="navbar-toggler"
           type="button"
@@ -43,27 +51,39 @@
           aria-expanded="false"
           aria-label="Toggle navigation"
         ></button>
-        <div class="" id="navbarNavAltMarkup">
-          <div class="navbar-nav d-flex align-items-center justify-content-center">
-            <!-- Logo -->
-            <a href="/profile" class="navbar-brand">
-              <a href="#" class="navbar-brand oxygen-bold fs-3 fw-bold text-white">Gainz</a>
-            </a>
-            <!-- Links -->
-            <div class="d-flex flex-row forum-regular fs-5 fw-medium ">
-              <a class="nav-link text-white" aria-current="page" href="/profile"
-                >Home</a
-              >
-              <a class="nav-link text-white" href=""
-                >About</a
-              >
-              <a class="nav-link text-white" href="/plan">Plan</a>
-              <!-- <a class="nav-link text-white" href="/logout">Sign Out</a> -->
+        <div class="w-100" id="navbarNavAltMarkup">
+          <div
+            class="navbar-nav d-flex align-items-center justify-content-between w-100 gray"
+          >
+            <!-- Logo and Links Container -->
+            <div class="d-flex flex-row fs-5 fw-medium align-items-center ">
+              <!-- Logo -->
+              <a href="/profile" class="navbar-brand">
+                <a href="#" class="navbar-brand fs-2 fw-bold"
+                  >Gainz</a
+                >
+              </a>
+              <!-- Links -->
+              <div class="d-flex flex-row fs-6 fw-ligher">
+                <a
+                  class="nav-link"
+                  aria-current="page"
+                  href="/profile"
+                  >Home</a
+                >
+                <a class="nav-link" href="/about">About</a>
+                <!-- <a class="nav-link" href="/plan">Plan</a> -->
+                <!-- <a class="nav-link" href="/logout">Sign Out</a> -->
+              </div>
             </div>
-              
+            <!-- Buttons Container -->
+            <div class="d-flex flex-row fs-6 fw-lighter">
+              <a href="/register" class="button-1 mx-2">REGISTER</a>
+              <a class="button-2 mx-2">LOGIN</a>
+            </div>
           </div>
         </div>
       </div>
     </nav>
-
-
+  </body>
+</html>

@@ -56,16 +56,16 @@ exports.logout = (req, res) => {
   });
 };
 
-exports.getSignup = (req, res) => {
+exports.getRegister = (req, res) => {
   if (req.user) {
     return res.redirect("/profile");
   }
-  res.render("signup", {
+  res.render("register", {
     title: "Create Account",
   });
 };
 
-exports.postSignup = (req, res, next) => {
+exports.postRegister = (req, res, next) => {
   const validationErrors = [];
   if (!validator.isEmail(req.body.email))
     validationErrors.push({ msg: "Please enter a valid email address." });
@@ -78,7 +78,7 @@ exports.postSignup = (req, res, next) => {
 
   if (validationErrors.length) {
     req.flash("errors", validationErrors);
-    return res.redirect("../signup");
+    return res.redirect("../register");
   }
   req.body.email = validator.normalizeEmail(req.body.email, {
     gmail_remove_dots: false,
@@ -100,7 +100,7 @@ exports.postSignup = (req, res, next) => {
         req.flash("errors", {
           msg: "Account with that email address or username already exists.",
         });
-        return res.redirect("../signup");
+        return res.redirect("../register");
       }
       user.save((err) => {
         if (err) {
