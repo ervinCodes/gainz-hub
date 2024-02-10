@@ -1,53 +1,58 @@
 <%- include('partials/navbar') -%>
-
-<main
-  class="container d-flex flex-column justify-content-center align-items-center index-page h-75"
->
-  <!-- Row 1 -->
-  <div
-    class="row d-flex flex-column justify-content-center align-items-center h-75"
+<!-- Body -->
+<div class="d-flex flex-column justify-content-around body-content h-100">
+  <main
+    class="d-flex flex-column justify-content-evenly align-items-center h-75 flex-grow-1"
   >
-    <!-- Col 1 -->
-    <div class="col text-white fw-semibold fs-1 d-flex align-items-end gray">
-      Simplifying your fitness goals
+    <!-- Row 1 -->
+    <div class="row flex-column justify-content-center align-items-center">
+      <!-- Col 1 -->
+      <div
+        class="col text-white fw-semibold fs-1 d-flex align-items-end gray text-center"
+      >
+        Simplifying your fitness goals
+      </div>
+      <!-- Col 2 -->
+      <div
+        class="col d-flex flex-row justify-content-center align-items-start pt-3"
+      >
+        <a href="" class="button-2 fs-6 fw-ligher text-decoration-none"
+          >LEARN MORE</a
+        >
+      </div>
     </div>
-    <!-- Col 2 -->
+    <!-- Row 2 -->
     <div
-      class="col d-flex flex-row justify-content-center align-items-start pt-3"
+      class="row flex-column d-flex flex-lg-row justify-content-evenly align-items-start text-center w-75 text-white"
     >
-      <a href="" class="button-2 fs-6 fw-ligher">LEARN MORE</a>
-    </div>
-  </div>
-  <!-- Row 2 -->
-  <div
-    class="row d-flex flex-row justify-content-evenly align-items-start text-center h-50 text-white w-100 gray"
-  >
-    <!-- Col 1 -->
-    <div class="col">
-      <i class="fa-regular fa-circle-check fa-4x"></i>
-      <div class="pt-4 fs-4">
-        Keep <span class="fw-bold orange">track</span> of your personal bests
+      <!-- Col 1 -->
+      <div class="pt-lg-0 pt-4 col">
+        <i class="fa-regular fa-circle-check fa-4x"></i>
+        <div class="pt-lg-4 pt-3 fs-lg-4 fs-sm-5">
+          Keep <span class="fw-bold orange">track</span> of your personal bests
+        </div>
+      </div>
+      <!-- Col 2 -->
+      <div class="pt-lg-0 pt-4 col">
+        <i class="fa-regular fa-rectangle-list fa-4x"></i>
+        <div class="pt-lg-4 pt-3 fs-lg-4 fs-sm-5">
+          Keep <span class="fw-bold orange">inventory</span> of all your
+          workouts
+        </div>
+      </div>
+      <!-- Col 3 -->
+      <div class="pt-lg-0 pt-4 col">
+        <i class="fa-regular fa-comment fa-4x"></i>
+        <div class="pt-lg-4 pt-3 fs-lg-4 fs-sm-5">
+          <span class="fw-bold orange">Share</span> wins with the community
+        </div>
       </div>
     </div>
-    <!-- Col 2 -->
-    <div class="col">
-      <i class="fa-regular fa-rectangle-list fa-4x"></i>
-      <div class="pt-4 fs-4">
-        Keep <span class="fw-bold orange">inventory</span> of all your workouts
-      </div>
-    </div>
-    <!-- Col 3 -->
-    <div class="col">
-      <i class="fa-regular fa-comment fa-4x"></i>
-      <div class="pt-4 fs-4">
-        <span class="fw-bold orange">Share</span> wins with the community
-      </div>
-    </div>
-  </div>
-  <!-- <div class="row justify-content-around mt-5">
-        <a href="/login" class="col-3 btn btn-primary"> Login</a>
-        <a href="/signup" class="col-3 btn btn-primary"> Signup</a>
-    </div> -->
-</main>
+    <!-- <div class="row justify-content-around mt-5">
+          <a href="/login" class="col-3 btn btn-primary"> Login</a>
+          <a href="/signup" class="col-3 btn btn-primary"> Signup</a>
+      </div> -->
+  </main>
 
-<%- include('partials/footer') -%>
+  <%- include('partials/footer') -%>
+</div>
