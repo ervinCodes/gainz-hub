@@ -26,9 +26,14 @@
 
 html {
   height: 100%;
+  overflow: auto;
 }
 
 body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 1)),
+    url("/images/dumbbells.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
   box-sizing: border-box;
   font-family: "Oxygen";
   height: 100vh; /* Set height to 100% of viewport height */
@@ -37,7 +42,6 @@ body {
   padding: 0;
   overflow: hidden;
 }
-
 
 /******************************************
   /* NAVBAR
@@ -67,13 +71,6 @@ nav {
 /******************************************
   /* MAIN
   /*******************************************/
-
-.body-content {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 1)),
-  url("/images/dumbbells.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-}
 
 .button-1 {
   background-color: transparent;
@@ -111,30 +108,22 @@ nav {
 
 /* Media Queries */
 
-// X-Small devices (portrait phones, less than 576px)
-// No media query for `xs` since this is the default in Bootstrap
-
-// Small devices (landscape phones, 576px and up)
-@media screen and (min-width: 576px) {
+@media screen and (max-width: 576px) {
 
 }
 
-// Medium devices (tablets, 768px and up)
-@media screen and (min-width: 768px) {
-
-}
-
-// Large devices (desktops, 992px and up)
-@media screen and (min-width: 992px) {
-}
-
-// X-Large devices (large desktops, 1200px and up)
-@media screen and (min-width: 1200px) {
-}
-
-// XX-Large devices (larger desktops, 1400px and up)
-@media (min-width: 1400px) {
-  main {
-    border: 1px solid white;
+@media screen and (max-width: 768px) {
+  body {
+    overflow: auto;
   }
+}
+
+@media screen and (max-width: 992px) {
+}
+
+@media screen and (max-width: 1200px) {
+}
+
+@media (max-width: 1400px) {
+
 }
