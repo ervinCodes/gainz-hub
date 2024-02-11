@@ -24,25 +24,41 @@
   /* ELEMENTS
 /*******************************************/
 
+html {
+  height: 100%;
+  overflow: auto;
+}
+
 body {
-  box-sizing: border-box;
   background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 1)),
     url("/images/dumbbells.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  width: 100%;
-  height: 100vh;
+  box-sizing: border-box;
   font-family: "Oxygen";
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
+  height: 100vh; /* Set height to 100% of viewport height */
+  min-height: 100vh; /* Ensure minimum height of 100% of viewport height */
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
 /******************************************
   /* NAVBAR
   /*******************************************/
+
+nav {
+  position: absolute;
+  z-index: 999;
+}
+
+.navbar-brand {
+  color: #ffffff;
+}
+
+.nav-link {
+  color: #ffffff;
+}
 
 .nav-link:hover {
   color: #fca311;
@@ -53,12 +69,8 @@ a {
 }
 
 /******************************************
-  /* INDEX
+  /* MAIN
   /*******************************************/
-
-.index-page {
-  height: 90vh;
-}
 
 .button-1 {
   background-color: transparent;
@@ -92,4 +104,26 @@ a {
 .social-icons {
   height: 30px;
   width: auto;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 576px) {
+
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow: auto;
+  }
+}
+
+@media screen and (max-width: 992px) {
+}
+
+@media screen and (max-width: 1200px) {
+}
+
+@media (max-width: 1400px) {
+
 }
