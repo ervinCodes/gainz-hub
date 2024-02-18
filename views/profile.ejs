@@ -1,46 +1,106 @@
 <%- include('partials/navbar') -%>
-<div class="container text-white">
-  <div class="row mt-5">
-      <div class="col-6">
-          <div>
-              <p><strong>User Name</strong>: <%= user.userName %></p>
-              <p><strong>Email</strong>: <%= user.email %></p>
-              <a href="/logout" class="col-3 btn btn-light">Logout</a>
-          </div>
-          <div class="mt-5">
-            <h2>Add a post</h2>
-            <form action="/post/createPost" enctype="multipart/form-data" method="POST">
-              <div class="mb-3">
-                  <label for="title" class="form-label">Title</label>
-                  <input type="text" class="form-control" id="title" name="title">
-              </div>
-              <div class="mb-3">
-                <label for="caption" class="form-label">Caption</label>
-                <textarea class="form-control" id="caption" name="caption"></textarea>
-              </div>
-              <div class="mb-3">
-                <label for="imgUpload" class="form-label">Image</label>
-                <input type="file" class="form-control" id="imageUpload" name="file">
-              </div>
-              <button type="submit" class="btn btn-light" value="Upload">Submit</button>
-            </form>
-          </div>
-      </div>
-      <div class="col-6">
-        <ul class="row list-unstyled">
-        <% for(var i=0; i<posts.length; i++) {%>
-          <li class="col-6 justify-content-between mt-5">
-            <a href="/post/<%= posts[i]._id%>">
-              <img class="img-fluid" src="<%= posts[i].image%>">
-            </a>
-          </li>
-        <% } %>
-        </ul>
-        <div class="row justify-content-center mt-5">
-          <a class="btn btn-light" href="/feed">Return to Feed</a>
-        </div>  
-      </div>  
+<div
+  class="container text-white d-flex flex-column justify-content-around align-items-center"
+>
+  <!-- Row 1-->
+  <div class="row my-lg-5 my-3 justify-self-start">
+    <!-- Col 1 -->
+    <div class="col-12">
+      <p class="fs-2"><strong>Welcome</strong> <%= user.userName %>!</p>
+      <!-- <p><strong>Email</strong>: <%= user.email %></p> -->
+    </div>
+  </div>
+  <!-- Row 2 -->
+  <div class="row my-lg-5 my-3">
+    <!-- Col 2 -->
+    <div class="col d-flex flex-column text-center gap-3 fs-4">
+      <div>Get Ready to Crush Your Goals! 💪🔥</div>
+      <div>Explore your options:</div>
+    </div>
+  </div>
+  <!-- Row 3 -->
+  <div class="row d-flex flex-lg-row flex-column gap-4 w-100 gap-4 my-lg-5 my-3">
+    <!-- Box 1 -->
+    <div class="col">
+      <a
+        href="/addPostPage"
+        class="card border border-2 rounded-2 p-5 d-flex justify-content-center align-items-center flex-column gap-4 shadow-lg text-decoration-none"
+        style="background-color: #14213d"
+      >
+        <!-- Icon -->
+        <i class="fa-regular fa-pen-to-square fa-3x"></i>
+        <!-- Text -->
+        <div>Add a post</div>
+      </a>
+    </div>
+    <!-- Box 2 -->
+    <div class="col">
+      <a
+        href="/workoutsPage"
+        class="card border border-2 rounded-2 p-5 d-flex justify-content-center align-items-center flex-column gap-4 shadow-lg text-decoration-none"
+        style="background-color: #14213d"
+      >
+        <!-- Icon -->
+        <i class="fa-solid fa-dumbbell fa-3x"></i>
+        <!-- Text -->
+        <div>View your workouts</div>
+      </a>
+    </div>
+    <!-- Box 3 -->
+    <div class="col">
+      <a
+        href="/feed"
+        class="col card border border-2 rounded-2 p-5 d-flex justify-content-center align-items-center flex-column gap-4 shadow-lg text-decoration-none"
+        style="background-color: #14213d"
+      >
+        <!-- Icon -->
+        <i class="fa-regular fa-comments fa-3x"></i>
+        <!-- Text -->
+        <div>Go to your feed</div>
+      </a>
+    </div>
+  </div>
+  <!-- Row 4 / LOGOUT -->
+  <div class="row w-100 my-lg-5 my-3">
+    <div class="col d-flex justify-content-center">
+      <a href="/logout" class="col-3 btn btn-light">Logout</a>
     </div>
   </div>
 </div>
+
 <%- include('partials/footer') -%>
+
+<!-- <div class="mt-5">
+  <h2>Add a post</h2>
+  <form action="/post/createPost" enctype="multipart/form-data" method="POST">
+    <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input type="text" class="form-control" id="title" name="title">
+    </div>
+    <div class="mb-3">
+      <label for="caption" class="form-label">Caption</label>
+      <textarea class="form-control" id="caption" name="caption"></textarea>
+    </div>
+    <div class="mb-3">
+      <label for="imgUpload" class="form-label">Image</label>
+      <input type="file" class="form-control" id="imageUpload" name="file">
+    </div>
+    <button type="submit" class="btn btn-light" value="Upload">Submit</button>
+  </form>
+</div> -->
+
+<!-- 
+<div class="col-6">
+  <ul class="row list-unstyled">
+  <% for(var i=0; i<posts.length; i++) {%>
+    <li class="col-6 justify-content-between mt-5">
+      <a href="/post/<%= posts[i]._id%>">
+        <img class="img-fluid" src="<%= posts[i].image%>">
+      </a>
+    </li>
+  <% } %>
+  </ul>
+  <div class="row justify-content-center mt-5">
+    <a class="btn btn-light" href="/feed">Return to Feed</a>
+  </div>  
+</div>  -->
