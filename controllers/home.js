@@ -5,13 +5,6 @@ module.exports = {
     getAbout: (req, res) => {
       res.render("about.ejs");
     },
-    getAddPostPage: (req, res) => {
-      try {
-        res.render("addPostPage.ejs")
-      } catch (err) {
-        console.log(err);
-      }
-    },
     getWorkoutsPage: (req, res) => {
       try { 
         res.render("workoutsPage.ejs");

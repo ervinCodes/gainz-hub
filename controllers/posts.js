@@ -11,6 +11,14 @@ module.exports = {
       console.log(err);
     }
   },
+  getAddPostPage: async (req, res) => {
+    try {
+      const posts = await Post.find({ user: req.user.id });
+      res.render("addPostPage.ejs", { posts: posts, user: req.user })
+    } catch (err) {
+      console.log(err);
+    }
+  },
   getFeed: async (req, res) => {
     try {
       const posts = await Post.find().sort({ createdAt: "desc" }).lean();
@@ -48,7 +56,7 @@ module.exports = {
         user: req.user.id,
       });
       console.log("Post has been added!");
-      res.redirect("/profile");
+      res.redirect("/addPostPage");
     } catch (err) {
       console.log(err);
     }
