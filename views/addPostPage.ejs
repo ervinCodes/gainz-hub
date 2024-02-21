@@ -33,12 +33,12 @@
       </form>
     </div>
     <!-- Col 2 -->
-    <div class="col-lg-6 col d-flex justify-content-center align-items-start">
+    <div class="col col d-flex justify-content-center align-items-start">
       <ul class="row list-unstyled">
         <% for(var i=0; i<posts.length; i++) {%>
           <li class="col-lg-6 col justify-content-between mt-5">
             <a href="/post/<%= posts[i]._id%>">
-              <img class="img-fluid" src="<%= posts[i].image%>">
+              <img class="img-fluid mx-auto" src="<%= posts[i].image%>">
             </a>
           </li>
         <% } %>
